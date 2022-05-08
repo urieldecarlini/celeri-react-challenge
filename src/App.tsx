@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { routes } from './routes';
 import useTheme from './hooks/useTheme';
 import { ThemeProvider } from '@material-ui/core';
+import './utils/i18n';
 
 const App = () => {
   const theme = useTheme();
