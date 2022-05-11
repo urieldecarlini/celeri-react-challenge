@@ -17,6 +17,10 @@ const lightTheme = responsiveFontSizes(
       h3: {
         fontSize: '2.5rem',
         fontFamily: 'Roboto'
+      },
+      subtitle1: {
+        fontSize: '1.2rem',
+        fontFamily: 'Roboto'
       }
     },
     palette: {
@@ -24,7 +28,7 @@ const lightTheme = responsiveFontSizes(
         default: '#FFFFFF'
       },
       primary: {
-        main: '#2B37D4'
+        main: '#1e90ff'
       },
       secondary: {
         main: '#E769A6'
@@ -36,7 +40,7 @@ const lightTheme = responsiveFontSizes(
         main: '#FC7B09'
       },
       info: {
-        main: '#6B7D6A'
+        main: '#64748b'
       },
       success: {
         main: '#09FE00'
