@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
   rectangle: {
     width: '200px',
-    height: '330px',
+    height: '300px',
     position: 'absolute',
     top: '44%',
     left: '50%',

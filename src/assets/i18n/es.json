@@ -23,6 +23,7 @@
   "tid_state": "Provincia",
   "tid_city": "Ciudad o localidad",
   "tid_address": "Calle",
+  "tid_street": "Calle",
   "tid_address_number": "Altura",
   "tid_apartment": "Piso y/o departamento",
   "tid_postal_code": "Código postal",
