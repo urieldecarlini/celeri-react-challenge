@@ -36,8 +36,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'black'
   },
   rectangle: {
-    width: '200px',
-    height: '300px',
+    width: '180px',
+    height: '270px',
     position: 'absolute',
     top: '44%',
     left: '50%',
