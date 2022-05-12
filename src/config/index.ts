@@ -5,3 +5,6 @@ const API_PATH = `${BASE_URL}/afip`;
 
 /** CENSUS **/
 export const CENSUS_PATH = `${API_PATH}/ws_sr_padron_a13`;
+
+/** FILE HANDLER **/
+export const FILE_HANDLER_PATH = `${API_PATH}/fileHandler`;

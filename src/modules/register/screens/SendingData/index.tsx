@@ -2,7 +2,6 @@ import { LinearProgress, Stack, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../../../assets/images/celeri-logo-black.png';
-import cameraTake from '../../../../components/CameraTake';
 import SubmitButton from '../../../../components/SubmitButton';
 import { useTranslator } from '../../../../hooks/useTranslator';
 import { Container, MainBlock } from '../../../../styles/model';
@@ -13,11 +12,12 @@ const SendingData = () => {
   const navigate = useNavigate();
 
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
   const buttonText = useTranslator('tid_proof_of_identity');
 
   useEffect(() => {
     setTimeout(() => {
+      //send data to server, get from params/localStorage all personal information and post to endpoint
+      //setTimeout is used to simulate the time it takes to send data to server and get response
       setLoading(false);
     }, 3000);
   }, []);
@@ -51,7 +51,7 @@ const SendingData = () => {
       {!loading ? (
         <SubmitButton
           buttonText={buttonText}
-          onClick={() => navigate('/proof-of-identity')}
+          onClick={() => navigate('/proof-of-identity-front')}
         />
       ) : null}
     </Container>

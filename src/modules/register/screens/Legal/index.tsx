@@ -90,6 +90,7 @@ const LegalInformation = () => {
           name="isForeignTaxpayer"
           value={legalInformation.isForeignTaxpayer}
           onChange={handleChangeInput}
+          className={classes.checkboxContainer}
         >
           <FormControlLabel
             value="true"
@@ -110,6 +111,7 @@ const LegalInformation = () => {
           name="isFundLegal"
           value={legalInformation.isFundLegal}
           onChange={handleChangeInput}
+          className={classes.checkboxContainer}
         >
           <FormControlLabel
             value="true"
@@ -127,7 +129,6 @@ const LegalInformation = () => {
         buttonText={useTranslator('tid_next_step')}
         onClick={() => navigate('/bank-data')}
         icon={<ArrowForwardIcon className={classes.arrowIcon} />}
-        // disabled={disabledButton}
       />
     </Container>
   );

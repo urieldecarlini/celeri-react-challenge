@@ -1,16 +1,11 @@
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
-  titleContainer: {
-    display: 'flex',
-    padding: '10px',
-    alignItems: 'center'
-  },
   arrowIcon: {
     color: theme.palette.background.default
   },
-  homeIcon: {
-    color: theme.palette.primary.main
+  image: {
+    marginTop: '30px'
   },
   button: {
     backgroundColor: theme.palette.primary.main,
@@ -18,7 +13,18 @@ const useStyles = makeStyles((theme) => ({
     textTransform: 'none',
     fontSize: '1.2rem'
   },
-  inputContainer: {
+  buttonRetake: {
+    backgroundColor: theme.palette.info.main,
+    color: theme.palette.text.primary,
+    textTransform: 'none',
+    fontSize: '1.2rem'
+  },
+  buttonContainer: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    marginTop: '3rem'
+  },
+  imageContainer: {
     marginTop: '1rem',
     marginBottom: '1rem'
   }

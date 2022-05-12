@@ -26,6 +26,10 @@ const useStyles = makeStyles((theme) => ({
   },
   arrowIcon: {
     color: theme.palette.background.default
+  },
+  inputContainer: {
+    marginTop: '1rem',
+    marginBottom: '1rem'
   }
 }));
 

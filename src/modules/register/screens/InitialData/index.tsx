@@ -1,19 +1,6 @@
 import { ChangeEvent, useEffect, useState } from 'react';
-import {
-  Container,
-  Footer,
-  Header,
-  MainBlock,
-  MainFlex,
-  Widget
-} from '../../../../styles/model';
+import { Container, MainBlock } from '../../../../styles/model';
 import useStyles from './styles';
-import {
-  Button,
-  InputAdornment,
-  TextField,
-  Typography
-} from '@material-ui/core';
 import { useTranslator } from '../../../../hooks/useTranslator';
 import HeaderImage from '../../../../components/HeaderImage';
 import SubmitButton from '../../../../components/SubmitButton';
@@ -25,8 +12,6 @@ import {
   Checkbox,
   FormControlLabel,
   FormGroup,
-  MenuItem,
-  Select,
   SelectChangeEvent
 } from '@mui/material';
 import InputFieldForm from '../../../../components/InputFieldForm';
@@ -61,7 +46,7 @@ const InitialData = () => {
       'informationStep',
       JSON.stringify({
         data: personalInformation,
-        step: 'initial-data'
+        step: 'initial-data' //TODO: same strategy in all views, modal navigate to this route saved in localStorage
       })
     );
     const isValidForm = validateForm();
@@ -88,6 +73,8 @@ const InitialData = () => {
 
   const getPersonCuit = async () => {
     //TODO: move to presenter
+    setDisabledButton(true);
+    //TODO: add loading
     try {
       const response = await getCuitByDNI(
         personalInformation.identificationNumber
@@ -120,36 +107,44 @@ const InitialData = () => {
     <Container className="container">
       <HeaderImage />
       <MainBlock className="content">
-        <InputFieldForm
-          placeholder={useTranslator('tid_phone')}
-          name="phoneNumber"
-          value={personalInformation.phoneNumber}
-          onChange={handleChangeInput}
-          icon={<SmartphoneIcon className={classes.inputIcon} />}
-        />
-        <InputFieldForm
-          placeholder={useTranslator('tid_email')}
-          name="email"
-          value={personalInformation.email}
-          onChange={handleChangeInput}
-          icon={<EmailIcon className={classes.inputIcon} />}
-        />
-        <SelectFieldForm
-          value={personalInformation.identificationType}
-          icon={<BadgeIcon className={classes.identificationIcon} />}
-          placeholder={useTranslator('tid_identification_type')}
-          name="identificationType"
-          onChange={handleChange}
-          values={IDENTIFICATION_TYPE}
-        />
+        <div className={classes.inputContainer}>
+          <InputFieldForm
+            placeholder={useTranslator('tid_phone')}
+            name="phoneNumber"
+            value={personalInformation.phoneNumber}
+            onChange={handleChangeInput}
+            icon={<SmartphoneIcon className={classes.inputIcon} />}
+          />
+        </div>
+        <div className={classes.inputContainer}>
+          <InputFieldForm
+            placeholder={useTranslator('tid_email')}
+            name="email"
+            value={personalInformation.email}
+            onChange={handleChangeInput}
+            icon={<EmailIcon className={classes.inputIcon} />}
+          />
+        </div>
+        <div className={classes.inputContainer}>
+          <SelectFieldForm
+            value={personalInformation.identificationType}
+            icon={<BadgeIcon className={classes.identificationIcon} />}
+            placeholder={useTranslator('tid_identification_type')}
+            name="identificationType"
+            onChange={handleChange}
+            values={IDENTIFICATION_TYPE}
+          />
+        </div>
         {/* TODO: add mask for identification number */}
-        <InputFieldForm
-          placeholder={useTranslator('tid_identification_number')}
-          onChange={handleChangeInput}
-          name="identificationNumber"
-          value={personalInformation.identificationNumber}
-          icon={<BadgeIcon className={classes.inputIcon} />}
-        />
+        <div className={classes.inputContainer}>
+          <InputFieldForm
+            placeholder={useTranslator('tid_identification_number')}
+            onChange={handleChangeInput}
+            name="identificationNumber"
+            value={personalInformation.identificationNumber}
+            icon={<BadgeIcon className={classes.inputIcon} />}
+          />
+        </div>
         <FormGroup className={classes.checkboxContainer}>
           <FormControlLabel
             control={
