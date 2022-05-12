@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     width: '180px',
     height: '270px',
     position: 'absolute',
-    top: '44%',
+    top: '42%',
     left: '50%',
     transform: 'translate(-50%,-50%)',
     border: '2px solid white'
