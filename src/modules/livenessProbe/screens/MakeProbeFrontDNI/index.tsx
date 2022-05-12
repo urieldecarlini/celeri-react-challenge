@@ -1,11 +1,11 @@
 import { Button, Typography } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import logo from '../../../../assets/images/celeri-logo-black.png';
 import { useTranslator } from '../../../../hooks/useTranslator';
 import { Container, MainBlock } from '../../../../styles/model';
 import useStyles from './styles';
 
-const MakeProbeDNI = () => {
+const MakeProbeFrontDNI = () => {
   const classes = useStyles();
   const navigate = useNavigate();
 
@@ -23,7 +23,7 @@ const MakeProbeDNI = () => {
             <Button
               className={classes.button}
               variant="contained"
-              onClick={() => console.log('MAKE PHOTO')}
+              onClick={() => navigate('/capture-photo')}
             >
               {useTranslator('tid_take_photo')}
             </Button>
@@ -32,6 +32,7 @@ const MakeProbeDNI = () => {
             <Button
               className={classes.button}
               variant="contained"
+              disabled={true}
               onClick={() => console.log('LOAD PHOTO')}
             >
               {useTranslator('tid_load_file')}
@@ -42,4 +43,4 @@ const MakeProbeDNI = () => {
     </Container>
   );
 };
-export default MakeProbeDNI;
+export default MakeProbeFrontDNI;

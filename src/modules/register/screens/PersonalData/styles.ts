@@ -17,6 +17,10 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
     textTransform: 'none',
     fontSize: '1.2rem'
+  },
+  inputContainer: {
+    marginTop: '1rem',
+    marginBottom: '1rem'
   }
 }));
 export default useStyles;

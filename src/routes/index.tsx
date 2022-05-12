@@ -7,7 +7,12 @@ import PersonalAddress from '../modules/register/screens/PersonalAddress';
 import LegalInformation from '../modules/register/screens/Legal';
 import BankData from '../modules/register/screens/BankData';
 import SendingData from '../modules/register/screens/SendingData';
-import MakeProbeDNI from '../modules/livenessProbe/screens/MakeProbeDNI';
+import MakeProbeFrontDNI from '../modules/livenessProbe/screens/MakeProbeFrontDNI';
+import CapturePhoto from '../modules/livenessProbe/screens/CapturePhoto';
+import MakeProbeBackDNI from '../modules/livenessProbe/screens/MakeProbeBackDNI';
+import MakeProbeSelfie from '../modules/livenessProbe/screens/MakeProbeSelfie';
+import CaptureVideo from '../modules/livenessProbe/screens/CaptureVideo';
+import SendFiles from '../modules/livenessProbe/screens/SendFiles';
 
 export interface IRoute {
   auth?: boolean;
@@ -63,8 +68,33 @@ export const routes: IRoute[] = [
     exact: true
   },
   {
-    path: '/proof-of-identity',
-    element: <MakeProbeDNI />,
+    path: '/proof-of-identity-front',
+    element: <MakeProbeFrontDNI />,
+    exact: true
+  },
+  {
+    path: '/proof-of-identity-back',
+    element: <MakeProbeBackDNI />,
+    exact: true
+  },
+  {
+    path: '/proof-of-identity-selfie',
+    element: <MakeProbeSelfie />,
+    exact: true
+  },
+  {
+    path: '/capture-photo',
+    element: <CapturePhoto />,
+    exact: true
+  },
+  {
+    path: '/capture-video',
+    element: <CaptureVideo />,
+    exact: true
+  },
+  {
+    path: '/send-files',
+    element: <SendFiles />,
     exact: true
   }
 ];

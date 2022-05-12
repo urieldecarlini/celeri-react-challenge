@@ -108,62 +108,76 @@ const PersonalAddress = () => {
             {useTranslator('tid_personal_address')}
           </Typography>
         </div>
-        <InputFieldForm
-          placeholder={useTranslator('tid_country')}
-          name="country"
-          hasLabel={true}
-          value={personAddress?.country}
-          onChange={handleChangeInput}
-          disabled={true}
-        />
-        <InputFieldForm
-          placeholder={useTranslator('tid_state')}
-          hasLabel={true}
-          name="state"
-          value={personAddress?.state}
-          onChange={handleChangeInput}
-          disabled={true}
-        />
-        <InputFieldForm
-          placeholder={useTranslator('tid_city')}
-          hasLabel={true}
-          name="city"
-          value={personAddress?.city}
-          onChange={handleChangeInput}
-          disabled={disabledForm}
-        />
-        <InputFieldForm
-          placeholder={useTranslator('tid_street')}
-          hasLabel={true}
-          name="street"
-          value={personAddress?.street}
-          onChange={handleChangeInput}
-          disabled={disabledForm}
-        />
-        <InputFieldForm
-          placeholder={useTranslator('tid_address_number')}
-          hasLabel={true}
-          name="addressNumber"
-          value={personAddress?.addressNumber}
-          onChange={handleChangeInput}
-          disabled={disabledForm}
-        />
-        <InputFieldForm
-          placeholder={useTranslator('tid_apartment')}
-          hasLabel={true}
-          name="apartment"
-          value={personAddress?.apartment}
-          onChange={handleChangeInput}
-          disabled={disabledForm}
-        />
-        <InputFieldForm
-          placeholder={useTranslator('tid_postal_code')}
-          hasLabel={true}
-          name="postalCode"
-          value={personAddress?.postalCode}
-          onChange={handleChangeInput}
-          disabled={disabledForm}
-        />
+        <div className={classes.inputContainer}>
+          <InputFieldForm
+            placeholder={useTranslator('tid_country')}
+            name="country"
+            hasLabel={true}
+            value={personAddress?.country}
+            onChange={handleChangeInput}
+            disabled={true}
+          />
+        </div>
+        <div className={classes.inputContainer}>
+          <InputFieldForm
+            placeholder={useTranslator('tid_state')}
+            hasLabel={true}
+            name="state"
+            value={personAddress?.state}
+            onChange={handleChangeInput}
+            disabled={true}
+          />
+        </div>
+        <div className={classes.inputContainer}>
+          <InputFieldForm
+            placeholder={useTranslator('tid_city')}
+            hasLabel={true}
+            name="city"
+            value={personAddress?.city}
+            onChange={handleChangeInput}
+            disabled={disabledForm}
+          />
+        </div>
+        <div className={classes.inputContainer}>
+          <InputFieldForm
+            placeholder={useTranslator('tid_street')}
+            hasLabel={true}
+            name="street"
+            value={personAddress?.street}
+            onChange={handleChangeInput}
+            disabled={disabledForm}
+          />
+        </div>
+        <div className={classes.inputContainer}>
+          <InputFieldForm
+            placeholder={useTranslator('tid_address_number')}
+            hasLabel={true}
+            name="addressNumber"
+            value={personAddress?.addressNumber}
+            onChange={handleChangeInput}
+            disabled={disabledForm}
+          />
+        </div>
+        <div className={classes.inputContainer}>
+          <InputFieldForm
+            placeholder={useTranslator('tid_apartment')}
+            hasLabel={true}
+            name="apartment"
+            value={personAddress?.apartment}
+            onChange={handleChangeInput}
+            disabled={disabledForm}
+          />
+        </div>
+        <div className={classes.inputContainer}>
+          <InputFieldForm
+            placeholder={useTranslator('tid_postal_code')}
+            hasLabel={true}
+            name="postalCode"
+            value={personAddress?.postalCode}
+            onChange={handleChangeInput}
+            disabled={disabledForm}
+          />
+        </div>
         <div
           style={{
             display: 'flex',

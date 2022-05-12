@@ -10,6 +10,10 @@ const useStyles = makeStyles((theme) => ({
   selectIcon: {
     color: theme.palette.info.main,
     marginRight: '9px'
+  },
+  inputContainer: {
+    marginTop: '1rem',
+    marginBottom: '1rem'
   }
 }));
 export default useStyles;
