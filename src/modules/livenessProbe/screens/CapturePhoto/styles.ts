@@ -37,9 +37,9 @@ const useStyles = makeStyles((theme) => ({
   },
   rectangle: {
     width: '180px',
-    height: '270px',
+    height: '250px',
     position: 'absolute',
-    top: '43.5%',
+    top: '44%',
     left: '50%',
     transform: 'translate(-50%,-50%)',
     border: '2px solid white'
