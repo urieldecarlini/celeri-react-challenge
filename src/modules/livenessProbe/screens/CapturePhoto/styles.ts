@@ -36,10 +36,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'black'
   },
   rectangle: {
-    width: '200px',
-    height: '330px',
+    width: '180px',
+    height: '270px',
     position: 'absolute',
-    top: '44%',
+    top: '42%',
     left: '50%',
     transform: 'translate(-50%,-50%)',
     border: '2px solid white'
